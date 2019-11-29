@@ -118,11 +118,13 @@ li $t2,0
 j looper
 
 
-
-
-
 subPrgm2:
 
+beq $t3,0,finish
+addi $t3,$t3,-1
+lb $s0, ($t4)
+addi $t4,$t4,1
+j subPrgm3
 
 continue:
 
