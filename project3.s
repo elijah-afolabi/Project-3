@@ -18,3 +18,15 @@ main:
     li $a1, 1001
     syscall
   
+    jal subPrgm1
+continue1:
+j print
+
+subPrgm1:
+     sub $sp, $sp,4
+     sw $a0, 0($sp)
+     lw $t0, 0($sp)
+     addi $sp,$sp,4
+     move $t6, $t0
+
+
