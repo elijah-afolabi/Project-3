@@ -84,6 +84,37 @@ noWntLooper:
    j noWntLooper
 
 
+insubstring:
+
+
+substring:
+
+
+subPrgm2:
+
+
+continue:
+
+
+subPrgm3:
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exit:
+li $v0, 10
+syscall
+
+
 
 
 
