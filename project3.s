@@ -190,18 +190,22 @@ li $v0, 1
 lw $a0, 0($sp)
 syscall
 
+com:
+beq $t1, 0,Exit
+li $v0, 4
+la $a0, comma
+syscall
 
+j done
 
-
-
-
-
-
-
-
-
-
+invalidprint:
+li $v0, 4
+la $a0, notvalid
+syscall
+j com
+ 
 Exit:
+
 li $v0, 10
 syscall
 
