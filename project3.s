@@ -170,10 +170,21 @@ j exp
 combine:
 
 mul $s2, $t9, $s0
-add $s1,$s1,$s2 
+add $s1,$s1,$s2
 j continue
 
 
+finish : jr $ra
+
+print:
+mul $t1,$t1,4
+add $sp, $sp $t1
+
+done:
+
+sub $t1, $t1,4
+ sub $sp,$sp,4
+ lw $s7, 0($sp)
 
 
 
