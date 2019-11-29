@@ -99,6 +99,26 @@ li $t2,0
 j looper
 
 substring:
+bgt $t2,0,insubstring
+bge $t3,5,insubstring
+addi $t1,$t1,1
+sub $sp, $sp,4
+sw $t6, 0($sp)
+move $t6,$t0
+lw $t4,0($sp)
+li $s1,0
+
+ jal subPrgm2
+
+lb $s0, ($t0)
+beq $s0, 0, continue1
+beq $s0, 10, continue1
+beq $s0,44, noWntLooper
+li $t2,0
+j looper
+
+
+
 
 
 subPrgm2:
