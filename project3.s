@@ -29,4 +29,15 @@ subPrgm1:
      addi $sp,$sp,4
      move $t6, $t0
 
+start:
+     li $t2,0
+     li $t7, -1
+     lb $s0, ($t0)
+     beq $s0, 9, skipper
+     beq $s0, 32, skipper
+     move $t6, $t0
+     j looper
+
+
+
 
