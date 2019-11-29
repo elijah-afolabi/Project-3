@@ -155,8 +155,17 @@ li $t9, 26
 j exp
 
 lower:
+sub $s0, $s0, 87
+beq $t3, 0, combine
+li $t9, 26
+j exp
+
 
 exp:
+ble $t8, 1, combine
+mul $t9, $t9, 26
+addi $t8, $t8, -1
+j exp
 
 combine:
 
