@@ -143,8 +143,16 @@ ble $s0, 116, lower
 #converters
 
 num:
+sub $s0, $s0, 48
+beq $t3, 0, combine
+li $t9, 26
+ j exp
 
 upper:
+sub $s0, $s0, 55
+beq $t3, 0, combine
+li $t9, 26
+j exp
 
 lower:
 
