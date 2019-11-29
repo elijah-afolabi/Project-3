@@ -86,6 +86,17 @@ noWntLooper:
 
 insubstring:
 
+addi $t1,$t1,1
+sub $sp, $sp,4
+sw $t7, 0($sp)
+move $t6,$t0
+lb $s0, ($t0)
+beq $s0, 0, continue1
+beq $s0, 10, continue1
+beq $s0,44, noWntLooper
+li $t3,0
+li $t2,0
+j looper
 
 substring:
 
@@ -110,6 +121,8 @@ lower:
 exp:
 
 combine:
+
+
 
 
 
