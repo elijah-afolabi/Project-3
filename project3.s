@@ -65,6 +65,25 @@ check:
    bge $s0, 113, noWntLooper
 
 
+spGap:
+   addi $t2,$t2,-1
+   j looper
+
+valid:
+   addi $t3, $t3,1
+   mul $t2,$t2,$t7
+   j looper
+
+noWntLooper:
+   lb $s0, ($t0)
+   beq $s0, 0, insubstring
+   beq $s0, 10, insubstring
+   addi $t0,$t0,1
+   beq $s0, 44, insubstring
+
+   j noWntLooper
+
+
 
 
 
