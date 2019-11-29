@@ -52,4 +52,21 @@ looper:
     beq $s0, 44, substring
 
 
+check:
+   bgt $t2,0,noWntLooper
+   beq $s0, 9, spGap
+   beq $s0, 32, spGap
+   ble $s0, 47, noWntLooper
+   ble $s0, 57, vaild
+   ble $s0, 64, noWntLooper
+   ble $s0, 80, vaild
+   ble $s0, 96, noWntLooper
+   ble $s0, 112, vaild
+   bge $s0, 113, noWntLooper
+
+
+
+
+
+
 
