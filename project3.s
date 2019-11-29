@@ -99,6 +99,19 @@ continue:
 subPrgm3:
 
 
+#converters
+
+num:
+
+upper:
+
+lower:
+
+exp:
+
+combine:
+
+
 
 
 
